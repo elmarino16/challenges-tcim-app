@@ -17,27 +17,30 @@ spring:
   application:
     name: challengesTCIM
   datasource:
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/challenges_TCIM?createDatabaseIfNotExist=true
-    username: postgres
-    password: admin
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:h2:mem:challengesTCIM;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MULTI_THREADED=FALSE
+    name:
+    username:
+    password:
+    hikari:
+      auto-commit: false
   jpa:
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-    database: postgresql
+    database-platform: io.github.jhipster.domain.util.FixedH2Dialect
+    database: H2
     open-in-view: false
     show-sql: false
     hibernate:
-      ddl-auto: create
+      ddl-auto: none
       naming:
         physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
         implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
     properties:
       hibernate.id.new_generator_mappings: true
-      hibernate.connection.provider_disables_autocommit: false
+      hibernate.connection.provider_disables_autocommit: true
       hibernate.cache.use_second_level_cache: false
       hibernate.cache.use_query_cache: false
       hibernate.generate_statistics: false
-      hibernate.hbm2ddl.auto: create
+      hibernate.hbm2ddl.auto: update
       hibernate.jdbc.time_zone: UTC
   liquibase:
     contexts: test
