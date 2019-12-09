@@ -1,5 +1,6 @@
 @import '~bootstrap/scss/functions';
 @import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
 
 /* ==========================================================================
 Navbar
@@ -16,16 +17,15 @@ Navbar
 }
 
 .navbar {
-  padding: 0.2rem 1rem;
-
-  ul.navbar-nav {
-    .nav-item {
-      margin-left: 0.5em;
-    }
+  @include media-breakpoint-down(sm) {
+    background-image: url(../../../content/images/mobile-bg-header.png);
+    background-size: cover;
+    padding: 20px;
   }
-
-  a.nav-link {
-    font-weight: 400;
+  @include media-breakpoint-up(md) {
+    background-image: url(../../../content/images/bg-header.png);
+    height: 230px;
+    background-size: 100% 100%;
   }
 }
 

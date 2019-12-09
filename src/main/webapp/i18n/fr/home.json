@@ -2,6 +2,7 @@
   "home": {
     "title": "Bienvenue sur la plateforme des Challenges TCIM !",
     "subtitle": "Ceci est votre page d'accueil",
+    "accountText": "J'ai déjà un compte",
     "logged": {
       "message": "Vous êtes connecté en tant que \"{{username}}\"."
     },

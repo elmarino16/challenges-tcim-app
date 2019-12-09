@@ -21,7 +21,6 @@ import { ErrorComponent } from './layouts/error/error.component';
     ChallengesTcimSharedModule,
     ChallengesTcimCoreModule,
     ChallengesTcimHomeModule,
-    // jhipster-needle-angular-add-module JHipster will add new module here
     ChallengesTcimEntityModule,
     ChallengesTcimAppRoutingModule
   ],

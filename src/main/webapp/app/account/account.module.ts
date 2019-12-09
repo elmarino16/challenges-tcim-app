@@ -11,10 +11,12 @@ import { PasswordResetInitComponent } from './password-reset/init/password-reset
 import { PasswordResetFinishComponent } from './password-reset/finish/password-reset-finish.component';
 import { SettingsComponent } from './settings/settings.component';
 import { accountState } from './account.route';
+import { AuthenticationComponent } from './authentication/authentication.component';
 
 @NgModule({
   imports: [ChallengesTcimSharedModule, RouterModule.forChild(accountState)],
   declarations: [
+    AuthenticationComponent,
     ActivateComponent,
     RegisterComponent,
     PasswordComponent,
